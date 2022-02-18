@@ -1,0 +1,10 @@
+alignments*
+*.tmp
+subread_outs
+MD5*
+.*
+htseq_outs
+ref
+report
+!.gitignore
+raw_data
