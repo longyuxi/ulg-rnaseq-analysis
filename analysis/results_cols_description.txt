@@ -1,0 +1,7 @@
+> mcols(res)$description
+[1] "mean of normalized counts for all samples"
+[2] "log2 fold change (MLE): condition untreated vs treated"
+[3] "standard error: condition untreated vs treated"
+[4] "Wald statistic: condition untreated vs treated"
+[5] "Wald test p-value: condition untreated vs treated"
+[6] "BH adjusted p-values"
