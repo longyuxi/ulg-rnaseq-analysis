@@ -1,0 +1,106 @@
+##fileformat=VCFv4.2
+##ALT=<ID=NON_REF,Description="Represents any possible alternative allele not already represented at this location by REF and ALT">
+##FILTER=<ID=LowQual,Description="Low quality">
+##FILTER=<ID=PASS,Description="All filters passed">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Allelic depths for the ref and alt alleles in the order listed">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth (reads with MQ=255 or with bad mates are filtered)">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=MIN_DP,Number=1,Type=Integer,Description="Minimum DP observed within the GVCF block">
+##FORMAT=<ID=PGT,Number=1,Type=String,Description="Physical phasing haplotype information, describing how the alternate alleles are phased in relation to one another; will always be heterozygous and is not intended to describe called alleles">
+##FORMAT=<ID=PID,Number=1,Type=String,Description="Physical phasing ID information, where each unique ID within a given sample (but not across samples) connects records within a phasing group">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification">
+##FORMAT=<ID=PS,Number=1,Type=Integer,Description="Phasing set (typically the position of the first variant in the set)">
+##FORMAT=<ID=RGQ,Number=1,Type=Integer,Description="Unconditional reference genotype confidence, encoded as a phred quality -10*log10 p(genotype call is wrong)">
+##FORMAT=<ID=SB,Number=4,Type=Integer,Description="Per-sample component statistics which comprise the Fisher's Exact Test to detect strand bias.">
+##GATKCommandLine=<ID=GenomicsDBImport,CommandLine="GenomicsDBImport --genomicsdb-workspace-path variants --variant /home/longyuxi/Documents/mount/RNAseq-raw-data/alignments-ncbi/vcfs/a344.out.grcm-ncbi-tran_sorted.g.vcf --variant /home/longyuxi/Documents/mount/RNAseq-raw-data/alignments-ncbi/vcfs/a346.out.grcm-ncbi-tran_sorted.g.vcf --variant /home/longyuxi/Documents/mount/RNAseq-raw-data/alignments-ncbi/vcfs/a347.out.grcm-ncbi-tran_sorted.g.vcf --variant /home/longyuxi/Documents/mount/RNAseq-raw-data/alignments-ncbi/vcfs/a348.out.grcm-ncbi-tran_sorted.g.vcf --variant /home/longyuxi/Documents/mount/RNAseq-raw-data/alignments-ncbi/vcfs/a2840.out.grcm-ncbi-tran_sorted.g.vcf --variant /home/longyuxi/Documents/mount/RNAseq-raw-data/alignments-ncbi/vcfs/a2841.out.grcm-ncbi-tran_sorted.g.vcf --intervals NC_000079.7:23990924-24009174 --genomicsdb-segment-size 1048576 --genomicsdb-vcf-buffer-size 16384 --overwrite-existing-genomicsdb-workspace false --batch-size 0 --consolidate false --validate-sample-name-map false --merge-input-intervals false --reader-threads 1 --max-num-intervals-to-import-in-parallel 1 --merge-contigs-into-num-partitions 0 --genomicsdb-shared-posixfs-optimizations false --bypass-feature-reader false --genomicsdb-use-gcs-hdfs-connector false --interval-set-rule UNION --interval-padding 0 --interval-exclusion-padding 0 --interval-merging-rule ALL --read-validation-stringency SILENT --seconds-between-progress-updates 10.0 --disable-sequence-dictionary-validation false --create-output-bam-index true --create-output-bam-md5 false --create-output-variant-index true --create-output-variant-md5 false --max-variants-per-shard 0 --lenient false --add-output-sam-program-record true --add-output-vcf-command-line true --cloud-prefetch-buffer 0 --cloud-index-prefetch-buffer 0 --disable-bam-index-caching false --sites-only-vcf-output false --help false --version false --showHidden false --verbosity INFO --QUIET false --use-jdk-deflater false --use-jdk-inflater false --gcs-max-retries 20 --gcs-project-for-requester-pays  --disable-tool-default-read-filters false",Version="4.2.5.0",Date="February 20, 2022 at 5:09:07 PM EST">
+##GATKCommandLine=<ID=GenotypeGVCFs,CommandLine="GenotypeGVCFs --output variants.vcf --variant gendb://variants --reference /home/longyuxi/Documents/mount/RNAseq-raw-data/ref/grcm39-ncbi.fa --include-non-variant-sites false --merge-input-intervals false --input-is-somatic false --tumor-lod-to-emit 3.5 --allele-fraction-error 0.001 --keep-combined-raw-annotations false --use-posteriors-to-calculate-qual false --dont-use-dragstr-priors false --use-new-qual-calculator true --annotate-with-num-discovered-alleles false --heterozygosity 0.001 --indel-heterozygosity 1.25E-4 --heterozygosity-stdev 0.01 --standard-min-confidence-threshold-for-calling 30.0 --max-alternate-alleles 6 --max-genotype-count 1024 --sample-ploidy 2 --num-reference-samples-if-no-call 0 --genotype-assignment-method USE_PLS_TO_ASSIGN --genomicsdb-max-alternate-alleles 50 --call-genotypes false --genomicsdb-use-bcf-codec false --genomicsdb-shared-posixfs-optimizations false --genomicsdb-use-gcs-hdfs-connector false --only-output-calls-starting-in-intervals false --interval-set-rule UNION --interval-padding 0 --interval-exclusion-padding 0 --interval-merging-rule ALL --read-validation-stringency SILENT --seconds-between-progress-updates 10.0 --disable-sequence-dictionary-validation false --create-output-bam-index true --create-output-bam-md5 false --create-output-variant-index true --create-output-variant-md5 false --max-variants-per-shard 0 --lenient false --add-output-sam-program-record true --add-output-vcf-command-line true --cloud-prefetch-buffer 40 --cloud-index-prefetch-buffer -1 --disable-bam-index-caching false --sites-only-vcf-output false --help false --version false --showHidden false --verbosity INFO --QUIET false --use-jdk-deflater false --use-jdk-inflater false --gcs-max-retries 20 --gcs-project-for-requester-pays  --disable-tool-default-read-filters false --disable-tool-default-annotations false --enable-all-annotations false --allow-old-rms-mapping-quality-annotation-data false",Version="4.2.5.0",Date="February 20, 2022 at 5:09:11 PM EST">
+##GATKCommandLine=<ID=HaplotypeCaller,CommandLine="HaplotypeCaller --emit-ref-confidence GVCF --output ../alignments-ncbi/a344.out.grcm-ncbi-tran_sorted.g.vcf --input ../alignments-ncbi/a344.out.grcm-ncbi-tran_sorted.MD.bam --reference /home/longyuxi/Documents/mount/RNAseq-raw-data/ref/grcm39-ncbi.fa --use-posteriors-to-calculate-qual false --dont-use-dragstr-priors false --use-new-qual-calculator true --annotate-with-num-discovered-alleles false --heterozygosity 0.001 --indel-heterozygosity 1.25E-4 --heterozygosity-stdev 0.01 --standard-min-confidence-threshold-for-calling 30.0 --max-alternate-alleles 6 --max-genotype-count 1024 --sample-ploidy 2 --num-reference-samples-if-no-call 0 --genotype-assignment-method USE_PLS_TO_ASSIGN --contamination-fraction-to-filter 0.0 --output-mode EMIT_VARIANTS_ONLY --all-site-pls false --gvcf-gq-bands 1 --gvcf-gq-bands 2 --gvcf-gq-bands 3 --gvcf-gq-bands 4 --gvcf-gq-bands 5 --gvcf-gq-bands 6 --gvcf-gq-bands 7 --gvcf-gq-bands 8 --gvcf-gq-bands 9 --gvcf-gq-bands 10 --gvcf-gq-bands 11 --gvcf-gq-bands 12 --gvcf-gq-bands 13 --gvcf-gq-bands 14 --gvcf-gq-bands 15 --gvcf-gq-bands 16 --gvcf-gq-bands 17 --gvcf-gq-bands 18 --gvcf-gq-bands 19 --gvcf-gq-bands 20 --gvcf-gq-bands 21 --gvcf-gq-bands 22 --gvcf-gq-bands 23 --gvcf-gq-bands 24 --gvcf-gq-bands 25 --gvcf-gq-bands 26 --gvcf-gq-bands 27 --gvcf-gq-bands 28 --gvcf-gq-bands 29 --gvcf-gq-bands 30 --gvcf-gq-bands 31 --gvcf-gq-bands 32 --gvcf-gq-bands 33 --gvcf-gq-bands 34 --gvcf-gq-bands 35 --gvcf-gq-bands 36 --gvcf-gq-bands 37 --gvcf-gq-bands 38 --gvcf-gq-bands 39 --gvcf-gq-bands 40 --gvcf-gq-bands 41 --gvcf-gq-bands 42 --gvcf-gq-bands 43 --gvcf-gq-bands 44 --gvcf-gq-bands 45 --gvcf-gq-bands 46 --gvcf-gq-bands 47 --gvcf-gq-bands 48 --gvcf-gq-bands 49 --gvcf-gq-bands 50 --gvcf-gq-bands 51 --gvcf-gq-bands 52 --gvcf-gq-bands 53 --gvcf-gq-bands 54 --gvcf-gq-bands 55 --gvcf-gq-bands 56 --gvcf-gq-bands 57 --gvcf-gq-bands 58 --gvcf-gq-bands 59 --gvcf-gq-bands 60 --gvcf-gq-bands 70 --gvcf-gq-bands 80 --gvcf-gq-bands 90 --gvcf-gq-bands 99 --floor-blocks false --indel-size-to-eliminate-in-ref-model 10 --disable-optimizations false --dragen-mode false --apply-bqd false --apply-frd false --disable-spanning-event-genotyping false --transform-dragen-mapping-quality false --mapping-quality-threshold-for-genotyping 20 --max-effective-depth-adjustment-for-frd 0 --just-determine-active-regions false --dont-genotype false --do-not-run-physical-phasing false --do-not-correct-overlapping-quality false --use-filtered-reads-for-annotations false --adaptive-pruning false --do-not-recover-dangling-branches false --recover-dangling-heads false --kmer-size 10 --kmer-size 25 --dont-increase-kmer-sizes-for-cycles false --allow-non-unique-kmers-in-ref false --num-pruning-samples 1 --min-dangling-branch-length 4 --recover-all-dangling-branches false --max-num-haplotypes-in-population 128 --min-pruning 2 --adaptive-pruning-initial-error-rate 0.001 --pruning-lod-threshold 2.302585092994046 --pruning-seeding-lod-threshold 9.210340371976184 --max-unpruned-variants 100 --linked-de-bruijn-graph false --disable-artificial-haplotype-recovery false --enable-legacy-graph-cycle-detection false --debug-assembly false --debug-graph-transformations false --capture-assembly-failure-bam false --num-matching-bases-in-dangling-end-to-recover -1 --error-correction-log-odds -Infinity --error-correct-reads false --kmer-length-for-read-error-correction 25 --min-observations-for-kmer-to-be-solid 20 --base-quality-score-threshold 18 --dragstr-het-hom-ratio 2 --dont-use-dragstr-pair-hmm-scores false --pair-hmm-gap-continuation-penalty 10 --expected-mismatch-rate-for-read-disqualification 0.02 --pair-hmm-implementation FASTEST_AVAILABLE --pcr-indel-model CONSERVATIVE --phred-scaled-global-read-mismapping-rate 45 --disable-symmetric-hmm-normalizing false --disable-cap-base-qualities-to-map-quality false --enable-dynamic-read-disqualification-for-genotyping false --dynamic-read-disqualification-threshold 1.0 --native-pair-hmm-threads 4 --native-pair-hmm-use-double-precision false --bam-writer-type CALLED_HAPLOTYPES --dont-use-soft-clipped-bases false --min-base-quality-score 10 --smith-waterman JAVA --max-mnp-distance 0 --force-call-filtered-alleles false --soft-clip-low-quality-ends false --allele-informative-reads-overlap-margin 2 --smith-waterman-dangling-end-match-value 25 --smith-waterman-dangling-end-mismatch-penalty -50 --smith-waterman-dangling-end-gap-open-penalty -110 --smith-waterman-dangling-end-gap-extend-penalty -6 --smith-waterman-haplotype-to-reference-match-value 200 --smith-waterman-haplotype-to-reference-mismatch-penalty -150 --smith-waterman-haplotype-to-reference-gap-open-penalty -260 --smith-waterman-haplotype-to-reference-gap-extend-penalty -11 --smith-waterman-read-to-haplotype-match-value 10 --smith-waterman-read-to-haplotype-mismatch-penalty -15 --smith-waterman-read-to-haplotype-gap-open-penalty -30 --smith-waterman-read-to-haplotype-gap-extend-penalty -5 --min-assembly-region-size 50 --max-assembly-region-size 300 --active-probability-threshold 0.002 --max-prob-propagation-distance 50 --force-active false --assembly-region-padding 100 --padding-around-indels 75 --padding-around-snps 20 --padding-around-strs 75 --max-extension-into-assembly-region-padding-legacy 25 --max-reads-per-alignment-start 50 --enable-legacy-assembly-region-trimming false --interval-set-rule UNION --interval-padding 0 --interval-exclusion-padding 0 --interval-merging-rule ALL --read-validation-stringency SILENT --seconds-between-progress-updates 10.0 --disable-sequence-dictionary-validation false --create-output-bam-index true --create-output-bam-md5 false --create-output-variant-index true --create-output-variant-md5 false --max-variants-per-shard 0 --lenient false --add-output-sam-program-record true --add-output-vcf-command-line true --cloud-prefetch-buffer 40 --cloud-index-prefetch-buffer -1 --disable-bam-index-caching false --sites-only-vcf-output false --help false --version false --showHidden false --verbosity INFO --QUIET false --use-jdk-deflater false --use-jdk-inflater false --gcs-max-retries 20 --gcs-project-for-requester-pays  --disable-tool-default-read-filters false --minimum-mapping-quality 20 --disable-tool-default-annotations false --enable-all-annotations false --allow-old-rms-mapping-quality-annotation-data false",Version="4.2.5.0",Date="February 19, 2022 at 8:59:23 PM EST">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##INFO=<ID=BaseQRankSum,Number=1,Type=Float,Description="Z-score from Wilcoxon rank sum test of Alt Vs. Ref base qualities">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth; some reads may have been filtered">
+##INFO=<ID=END,Number=1,Type=Integer,Description="Stop position of the interval">
+##INFO=<ID=ExcessHet,Number=1,Type=Float,Description="Phred-scaled p-value for exact test of excess heterozygosity">
+##INFO=<ID=FS,Number=1,Type=Float,Description="Phred-scaled p-value using Fisher's exact test to detect strand bias">
+##INFO=<ID=InbreedingCoeff,Number=1,Type=Float,Description="Inbreeding coefficient as estimated from the genotype likelihoods per-sample when compared against the Hardy-Weinberg expectation">
+##INFO=<ID=MLEAC,Number=A,Type=Integer,Description="Maximum likelihood expectation (MLE) for the allele counts (not necessarily the same as the AC), for each ALT allele, in the same order as listed">
+##INFO=<ID=MLEAF,Number=A,Type=Float,Description="Maximum likelihood expectation (MLE) for the allele frequency (not necessarily the same as the AF), for each ALT allele, in the same order as listed">
+##INFO=<ID=MQ,Number=1,Type=Float,Description="RMS Mapping Quality">
+##INFO=<ID=MQRankSum,Number=1,Type=Float,Description="Z-score From Wilcoxon rank sum test of Alt vs. Ref read mapping qualities">
+##INFO=<ID=QD,Number=1,Type=Float,Description="Variant Confidence/Quality by Depth">
+##INFO=<ID=RAW_MQandDP,Number=2,Type=Integer,Description="Raw data (sum of squared MQ and total depth) for improved RMS Mapping Quality calculation. Incompatible with deprecated RAW_MQ formulation.">
+##INFO=<ID=ReadPosRankSum,Number=1,Type=Float,Description="Z-score from Wilcoxon rank sum test of Alt vs. Ref read position bias">
+##INFO=<ID=SOR,Number=1,Type=Float,Description="Symmetric Odds Ratio of 2x2 contingency table to detect strand bias">
+##contig=<ID=NC_000067.7,length=195154279>
+##contig=<ID=NT_166280.1,length=169725>
+##contig=<ID=NT_166281.1,length=241735>
+##contig=<ID=NT_166282.1,length=153618>
+##contig=<ID=NT_162750.1,length=206961>
+##contig=<ID=NW_023337852.1,length=8412>
+##contig=<ID=NT_166338.1,length=40056>
+##contig=<ID=NC_000068.8,length=181755017>
+##contig=<ID=NC_000069.7,length=159745316>
+##contig=<ID=NC_000070.7,length=156860686>
+##contig=<ID=NT_187055.1,length=1976>
+##contig=<ID=NC_000071.7,length=151758149>
+##contig=<ID=NT_187056.1,length=199368>
+##contig=<ID=NT_187057.1,length=205776>
+##contig=<ID=NT_187058.1,length=184189>
+##contig=<ID=NT_166438.1,length=195993>
+##contig=<ID=NT_187059.1,length=953012>
+##contig=<ID=NC_000072.7,length=149588044>
+##contig=<ID=NC_000073.7,length=144995196>
+##contig=<ID=NT_166307.1,length=175968>
+##contig=<ID=NC_000074.7,length=130127694>
+##contig=<ID=NC_000075.7,length=124359700>
+##contig=<ID=NC_000076.7,length=130530862>
+##contig=<ID=NC_000077.7,length=121973369>
+##contig=<ID=NC_000078.7,length=120092757>
+##contig=<ID=NC_000079.7,length=120883175>
+##contig=<ID=NC_000080.7,length=125139656>
+##contig=<ID=NC_000081.7,length=104073951>
+##contig=<ID=NC_000082.7,length=98008968>
+##contig=<ID=NC_000083.7,length=95294699>
+##contig=<ID=NC_000084.7,length=90720763>
+##contig=<ID=NC_000085.7,length=61420004>
+##contig=<ID=NC_000086.8,length=169476592>
+##contig=<ID=NT_165789.3,length=559103>
+##contig=<ID=NC_000087.8,length=91455967>
+##contig=<ID=NT_187060.1,length=182347>
+##contig=<ID=NT_187061.1,length=259875>
+##contig=<ID=NT_187062.1,length=155838>
+##contig=<ID=NT_187063.1,length=158099>
+##contig=<ID=NT_166451.1,length=42057>
+##contig=<ID=NT_166462.1,length=31602>
+##contig=<ID=NT_166465.1,length=25871>
+##contig=<ID=NT_166466.1,length=23158>
+##contig=<ID=NT_166467.1,length=38659>
+##contig=<ID=NT_166469.1,length=35240>
+##contig=<ID=NT_166474.1,length=24668>
+##contig=<ID=NT_166476.1,length=23629>
+##contig=<ID=NT_166478.1,length=24323>
+##contig=<ID=NT_166443.1,length=22974>
+##contig=<ID=NT_166444.1,length=31704>
+##contig=<ID=NT_166480.1,length=21240>
+##contig=<ID=NT_166456.1,length=28664>
+##contig=<ID=NT_166471.1,length=24685>
+##contig=<ID=NT_166473.1,length=28772>
+##contig=<ID=NT_166454.1,length=26764>
+##contig=<ID=NT_166463.1,length=72385>
+##contig=<ID=NT_166450.1,length=47073>
+##contig=<ID=NT_166452.1,length=20208>
+##contig=<ID=NT_187064.1,length=114452>
+##contig=<ID=NW_023337853.1,length=31129>
+##contig=<ID=NC_005089.1,length=16299>
+##source=GenomicsDBImport
+##source=GenotypeGVCFs
+##source=HaplotypeCaller
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	a2840	a2841	a344	a346	a347	a348
+NC_000079.7	23994292	.	T	C	40.71	.	AC=2;AF=0.167;AN=12;DP=3;ExcessHet=0.0000;FS=0.000;MLEAC=2;MLEAF=0.167;MQ=60.00;QD=20.36;SOR=0.693	GT:AD:DP:GQ:PL	0/0:0,0:0:0:0,0,0	0/0:0,0:0:0:0,0,0	0/0:0,0:0:0:0,0,0	1/1:0,2:2:6:49,6,0	0/0:1,0:1:3:0,3,42	0/0:0,0:0:0:0,0,0
+NC_000079.7	23996590	.	A	AT	524.06	.	AC=2;AF=0.167;AN=12;BaseQRankSum=2.17;DP=134;ExcessHet=0.4139;FS=13.598;MLEAC=2;MLEAF=0.167;MQ=60.00;MQRankSum=0.00;QD=14.16;ReadPosRankSum=0.402;SOR=0.811	GT:AD:DP:GQ:PL	0/1:9,9:26:99:238,0,293	0/1:9,10:29:99:300,0,312	0/0:27,0:27:81:0,81,1094	0/0:7,0:7:18:0,18,270	0/0:14,0:14:42:0,42,558	0/0:28,0:28:84:0,84,1101
+NC_000079.7	23999456	.	G	GA	110.04	.	AC=3;AF=0.250;AN=12;BaseQRankSum=0.00;DP=55;ExcessHet=1.7609;FS=1.512;MLEAC=3;MLEAF=0.250;MQ=60.00;MQRankSum=0.00;QD=2.90;ReadPosRankSum=0.921;SOR=1.124	GT:AD:DP:GQ:PL	0/1:12,4:16:65:65,0,255	0/1:11,3:14:25:25,0,251	0/0:7,0:7:15:0,15,225	0/0:2,0:2:0:0,0,0	0/1:6,2:8:32:32,0,145	0/0:7,0:7:18:0,18,270
+NC_000079.7	24002772	.	GGTTT	G	56.68	.	AC=1;AF=0.083;AN=12;BaseQRankSum=0.00;DP=61;ExcessHet=0.0000;FS=0.000;MLEAC=1;MLEAF=0.083;MQ=60.00;MQRankSum=0.00;QD=7.09;ReadPosRankSum=0.619;SOR=0.169	GT:AD:DP:GQ:PL	0/0:14,0:14:0:0,0,475	0/0:14,0:14:36:0,36,540	0/0:7,0:7:18:0,18,270	0/0:8,0:8:24:0,24,266	0/0:8,0:8:24:0,24,310	0/1:6,2:8:66:66,0,246
+NC_000079.7	24008356	.	C	CA	88.01	.	AC=2;AF=0.167;AN=12;BaseQRankSum=1.31;DP=155;ExcessHet=0.4139;FS=3.099;MLEAC=2;MLEAF=0.167;MQ=60.00;MQRankSum=0.00;QD=1.44;ReadPosRankSum=0.438;SOR=0.935	GT:AD:DP:GQ:PL	0/0:31,0:31:90:0,90,1054	0/1:30,7:37:81:81,0,824	0/1:21,3:24:21:21,0,575	0/0:12,0:12:36:0,36,477	0/0:31,0:31:84:0,84,1260	0/0:18,0:18:51:0,51,765
+NC_000079.7	24008746	.	A	AC	796.76	.	AC=6;AF=0.500;AN=12;BaseQRankSum=0.344;DP=85;ExcessHet=11.5949;FS=23.052;MLEAC=6;MLEAF=0.500;MQ=60.00;MQRankSum=0.00;QD=12.45;ReadPosRankSum=0.557;SOR=3.181	GT:AD:DP:GQ:PL	0/1:2,6:8:15:145,0,15	0/1:8,7:17:99:167,0,158	0/1:1,5:6:10:121,0,10	0/1:7,5:14:99:120,0,156	0/1:7,8:15:99:162,0,150	0/1:4,4:8:71:89,0,71

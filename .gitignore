@@ -8,3 +8,5 @@ ref
 report
 !.gitignore
 raw_data
+.Rproj.user
+gatkvarcall/variants
